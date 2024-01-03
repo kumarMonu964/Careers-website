@@ -2,50 +2,39 @@
 <html>
 <head>
   <title>Career website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
-    h1 {
-      font-size: 80px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100, 100, 100);
-      text-align: center;
-    }
     #banner {
       height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom: 16
     }
-
+    h1 {
+      font-size: 80px;
+      font-family: Roboto;
+      font-weight: normal;
+      color: rgb(100,100,100);
+    },
     h2 {
-      font-size: 32px;
+      font-size: 80px;
       font-family: Roboto;
-      color: rgb(80, 80, 80);
-      text-align: center;
       font-weight: normal;
+      color: rgb(100,100,100);
     }
-    .body_text {
-      font-size: 32px;
-      font-family: Roboto;
-      color: rgb(80, 80, 80);
-      text-align: right;
-      font-weight: normal;
-    }
-    #body {
-      max-width: 720px;
-      margin: 0 auto 0 auto;
-    }
+    
   </style>
-  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div id="container">
-  <div id="head">
-  <h1>Jobian Career</h1>
-  <img id="banner" src="/static/banner.jpg"></img>
-  </div>
-  <div id="body">
-  <h2>About Jobian</h2>
-  <p class="body_text">
+  <div class="container bg-light text-dark">
+  <h1 class="text-center mt-2 mb-4">Jobian Career</h1>
+  <img class="img-fluid" id="banner" src="/static/banner.jpg"></img>
+
+  <h2 class="text-center mt-2">About Jobian</h2>
+ <p class="lead">   
   <p>Why Choose Jobian?</p>
 
   <p>
@@ -54,15 +43,17 @@
   We collaborate with leading IT companies, startups, and innovative organizations. This ensures that our job seekers have access to a diverse range of high-quality positions, and our partners find the best talent to drive their success.
       </p><p>
   Join Jobian today and take the next step in your IT career journey. Your dream job in the IT industry is just a click away!</p></p>
-
-  <h2>Open Positions</h2>
-  <p class="body_text">TODO - Show the jobs here</p>
-    <div style="text-align:center;">
-  <button>Contact Us</button>
-    </div>
-  <div id="footer">
-      <p>Copyright 2022, Jobian</p>
-    </div>
+</p>
+  <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    
+  <div class="mt-2">
+    {% for job in jobs %}
+      {% include 'jobitem.html' %}
+    {% endfor %}
+  </div>
+  <div class="text-center">
+  <button type="button" class="btn btn-secondary btn-lg mt-4">Contact Us</button>
+  <p class="mt-4">Copyright 2022, Jobian</p>
   </div>
   </div>
 </body>
