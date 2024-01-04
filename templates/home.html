@@ -31,20 +31,29 @@
 <body>
   {% include 'nav.html'%}
   <div class="container bg-light text-dark">
-  <!-- <h1 class="text-center mt-2 mb-4">Jobian Career</h1> -->
+  <h1 class="text-center mt-2 mb-4">Jobian Career</h1>
   <img class="img-fluid" id="banner" src="/static/banner.jpg"></img>
 
   <h2 class="text-center mt-2">About Jobian</h2>
  <p class="lead">   
   <p>Why Choose Jobian?</p>
 
-  <p>
-  Jobian is tailored exclusively for the IT sector. Whether you are a seasoned developer, a cybersecurity expert, a data scientist, or an aspiring IT professional, Jobian is your dedicated platform for finding the perfect match. Explore a vast array of IT job opportunities from across the industry. Our platform features positions ranging from software development and network administration to artificial intelligence and blockchain technology.
-    </p><p>
-  We collaborate with leading IT companies, startups, and innovative organizations. This ensures that our job seekers have access to a diverse range of high-quality positions, and our partners find the best talent to drive their success.
-      </p><p>
-  Join Jobian today and take the next step in your IT career journey. Your dream job in the IT industry is just a click away!</p></p>
-</p>
+  <div class="row">
+    <div class="col-6">
+      <p>
+        Jobian is tailored exclusively for the IT sector. Whether you are a seasoned developer, a cybersecurity expert, a data scientist, or an aspiring IT professional, Jobian is your dedicated platform for finding the perfect match. Explore a vast array of IT job opportunities from across the industry. Our platform features positions ranging from software development and network administration to artificial intelligence and blockchain technology.
+          </p><p>
+        We collaborate with leading IT companies, startups, and innovative organizations. This ensures that our job seekers have access to a diverse range of high-quality positions, and our partners find the best talent to drive their success.
+            </p><p>
+        Join Jobian today and take the next step in your IT career journey. Your dream job in the IT industry is just a click away!</p></p>
+      </p>
+    </div>
+    <div class="col-6">
+      <img class="img-fluid" id="banner" src="https://tpistaffingservice.com/wp-content/uploads/2020/08/communication.jpg" style="height:380px"></img>
+    </div>
+    
+  </div>
+    
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     
   <div class="mt-2">
@@ -52,11 +61,21 @@
       {% include 'jobitem.html' %}
     {% endfor %}
   </div>
-  <div class="text-center">
-  <button type="button" class="btn btn-secondary btn-lg mt-4">Contact Us</button>
-  <p class="mt-4">Copyright 2022, Jobian</p>
+ 
+    </div>
+    </div>
+  <div class="text-center mt-5">
+        Have Queries?
+      
+  
+        <a href="mailto:jobian_career@gmail.com?subject=Query%20regarding%3A%20%3Cyour%20query%3E&body=Dear%20Team%2C%0D%0A%0D%0AQuestion%3A%20%3Cyour%20question%3E%0D%0A%0D%0AThanks%20and%20Regards%2C%0D%0A%3Cyour%20name%3E" type="button" class="btn btn-secondary btn-lg mt-4">Mail Us</a>
+      
   </div>
-  </div>
+
+
+    
+ 
+  {% include 'footer.html'%}
 </body>
 </html>
   
